@@ -1,5 +1,5 @@
 <!--
-   Ability to save the Employee Payroll Object to Local Storage.
+   Ability to reset the form on clicking reset
 -->
 
 <!DOCTYPE html>
@@ -16,7 +16,8 @@
     <body>
         <header class="header-content header">
             <div class="logo-content">
-                <img src="..\assets\images\logo.png">                <div>
+                <img src="..\assets\images\logo.png">                
+                <div>
                     <span class="emp-text">EMPLOYEE</span><br>
                     <span class="emp-text emp-payroll">PAYROLL</span><br>
                 </div>
@@ -50,7 +51,8 @@
                         </label>
                         <label>
                             <input type="radio" id="profile4" name="profile" value="../assets/profile-images/Ellipse -7.png" required>
-                            <img class="profile" id="image4" src="..\assets\profile images\Ellipse -7.png">                        </label>
+                            <img class="profile" id="image4" src="..\assets\profile images\Ellipse -7.png">
+                        </label>
                     </div>
                 </div>
                 <div class="row-content">
@@ -84,7 +86,7 @@
                 </div>
                 <div class="row-content">
                     <label class="label text" for="startDate">Start Date</label>
-                    <div>
+                    <div id="date">
                         <select id="day" name="Day">
                             <option value="Day">Day</option>
                             <option value='01'>01</option>
@@ -144,14 +146,15 @@
                             <option value='2016'>2016</option>
                         </select>
                     </div>
+                    <error-output class="date-error" for="text"></error-output>
                 </div>  
                 <div class="row-content">
                     <label class="label text" for="notes">Notes</label>
                     <textarea id="notes" class="input" name="Notes" style="height:100px;"></textarea>
                 </div>   
                 <div class="buttonParent">
-                    <a href=".\index.html" class="resetButton button cancelButton">Cancel</a>
-                    <div class="submit-reset">
+                    <a href=".\index.html" class="resetButton button cancelButton">Cancel</a>                   
+                     <div class="submit-reset">
                         <button type="submit" class="button submitButton" id="submitButton">Submit</button>
                         <button type="reset" class="resetButton button" id="resetButton">Reset</button>
                     </div>
